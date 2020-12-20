@@ -1,0 +1,14 @@
+[Unit]
+Description=LiteSH
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=/home/danil/3course/OC/lab6/bin/lab6 -server
+ExecStop=
+KillMode=control-group
+OOMScoreAdjust=-1000
+
+[Install]
+WantedBy=multi-user.target
