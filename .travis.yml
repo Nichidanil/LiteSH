@@ -1,0 +1,9 @@
+os: linux
+language: cpp
+compiler: g++
+dist: xenial
+script:
+- git ls-files src/ | xargs clang-format -i && git diff --exit-code
+- make lib
+- make
+
